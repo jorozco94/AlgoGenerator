@@ -4,8 +4,80 @@
   padding: 0;
 }
 
+:root {
+  --default-margin: 5px;
+  --default-padding: 5px;
+  --default-borderRad: 5px;
+  --mainBg-color: bisque;
+  --accent-color: #fffff0;
+  --resultsBg-color: #ccd2c6;
+  --alt-accent-color: #f6f6e3;
+}
+
 body {
+  font-family: Tahoma, sans-serif;
+  background-color: var(--mainBg-color);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+header {
+  margin: var(--default-margin);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: var(--default-margin);
+}
+
+input[type="text"], select {
+  padding: var(--default-padding);
+  border: 1px solid var(--accent-color);
+  border-radius: var(--default-borderRad);
+}
+
+button {
+  padding: calc(var(--default-padding) * 2) calc(var(--default-padding) * 2);
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: var(--default-borderRad);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--alt-accent-color);
+  font-weight: bold;
+}
+
+.sortingOpts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sortingOpts > * {
+  margin: var(--default-margin);
+}
+
+.valueDisplay {
+  margin-top: var(--default-margin);
+  background-color: var(--resultsBg-color);
+  max-width: 40vw;
+  overflow-x: auto;
+  border-radius: var(--default-borderRad);
+
+}
+
+.finalValue {
+  padding: var(--default-padding);
+  border: 1px solid var(--accent-color);
+  border-radius: var(--default-borderRad);
+}
+
+@media(max-width: 768px) {
+  .sortingOpts {
+    align-items: center;
+  }
 }
