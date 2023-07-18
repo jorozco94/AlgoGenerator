@@ -1,6 +1,6 @@
-import bubble from "./bubbleSort.js";
-import insertion from "./insertionSort.js";
-import selection from "./selectionSort.js";
+import { bubble } from "./bubbleSort.js";
+import { insertion } from "./insertionSort.js";
+import { selection } from "./selectionSort.js";
 
 const runButton = document.querySelector(".run");
 const inputArr = document.getElementById("inputArr");
